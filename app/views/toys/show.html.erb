@@ -1,10 +1,11 @@
 
-<div class="container-show"><img src="https://www.telegraph.co.uk/content/dam/men/2016/01/26/Actionheader_trans_NvBQzQNjv4BqEDjTm7JpzhSGR1_8ApEWQA1vLvhkMtVb21dMmpQBfEs.jpg", height= "300", width= "400" alt="photo action man">
+<div class="container-show" style="background-image: url(<%= @toy.photo.attached? ? cl_image_path(@toy.photo.key) : asset_path("ranger.jpg")%>)">
+
   <h1><%= @toy.name %></h1>
   <h2><%= @toy.price %>€/jour</h2>
   <h3>Couleur : <%= @toy.color %></h3>
 </div>
-<%#= cl_image_tag @toy.photo.key, height: 300, width: 400, crop: :fill %>
+
 
 <%= link_to "Modifier", edit_toy_path(@toy) %>
 <div class="container">
@@ -31,7 +32,7 @@
 </div>
 
 <% @reviews.each do |review|%>
-    <div class="card-product mx-5 bg-dark">
+    <div class="card-product mx-5 bg-white">
       <div class="card-product-infos">
       <p><%= review.rating %></p>
          <p><%= review.content %></p>
