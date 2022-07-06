@@ -1,0 +1,44 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  overflow-x: scroll;
+}
+
+.cards a{
+  text-decoration: none;
+  color: white;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 300px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgb(13, 13, 13);
+  border: 1px solid #464646;
+  border-radius: 1px;
+  box-shadow: 0 0 15px rgba(54, 54, 54, 0.2);
+  margin: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-category:hover{
+  transition: 0.8s ease;
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.title-card{
+  text-transform: uppercase;
+}
+
+.container-show{
+  text-align: center;
+}
