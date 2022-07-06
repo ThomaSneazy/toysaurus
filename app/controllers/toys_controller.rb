@@ -11,9 +11,6 @@ class ToysController < ApplicationController
     @booking = Booking.new
     @reviews = Review.where(toy: @toy)
     @review = Review.new(toy: @toy)
-    # @toy.reviews.each do |review|
-    #   @reviews << Review.find_by(id: review)
-
   end
 
   def new
@@ -44,6 +41,6 @@ class ToysController < ApplicationController
   end
 
   def toy_params
-    params.require(:toy).permit(:name, :price, :color)
+    params.require(:toy).permit(:name, :price, :color, :photo)
   end
 end
