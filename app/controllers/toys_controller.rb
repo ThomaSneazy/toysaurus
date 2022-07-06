@@ -9,11 +9,11 @@ class ToysController < ApplicationController
   def show
     @toy = Toy.find(params[:id])
     @booking = Booking.new
-    @reviews = []
+    @reviews = Review.where(toy: @toy)
     @review = Review.new(toy: @toy)
-    @reviews.each do |review|
-      @reviews << Review.find_by(id: review)
-    end
+    # @toy.reviews.each do |review|
+    #   @reviews << Review.find_by(id: review)
+
   end
 
   def new
