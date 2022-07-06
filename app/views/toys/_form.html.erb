@@ -1,0 +1,12 @@
+<div class="container"><%= simple_form_for @toy do |f| %>
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <%= f.input :name, label: 'Name of toy', error: 'Username is mandatory, please specify one' %>
+    <%= f.input :price %>
+    <%= f.input :color %>
+    <%#= f.input :description %>
+    <%#= f.association :category %>
+    <%#= f.input :photo, as: :file %>
+    <%= f.button :submit, class: "btn-success" %>
+    <% end %>
+  </div>
+</div>

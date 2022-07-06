@@ -1,0 +1,15 @@
+<h1>List des jouets</h1>
+
+<div class="cards">
+      <% @toys.each do |toy| %>
+        <%= link_to toy_path(toy), :action => 'go' do %>
+          <div class="card-category" style="background-image: linear-gradient(rgb(0 0 0 / 30%),rgb(0 0 0 / 30%)), url('https://www.telegraph.co.uk/content/dam/men/2016/01/26/Actionheader_trans_NvBQzQNjv4BqEDjTm7JpzhSGR1_8ApEWQA1vLvhkMtVb21dMmpQBfEs.jpg')">
+            <h3 class="title-card"><%= toy.name %></h3>
+          </div>
+        <% end %>
+      <% end %>
+</div>
+<div>
+    <%= link_to 'Add a toy', new_toy_path, class: "btn-add btn btn-primary"  %>
+  </div>
+<div class="container-btn">
